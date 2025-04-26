@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -20,54 +20,56 @@
     </header>
     <div class="container">
         <aside class="menu-lateral">
-            <button class="active">Geral</button>
-            <button>Banheiro</button>
-            <button>Lavanderia</button>
-            <button>Pesada</button>
-            <button>Auto</button>
+            <button class="active" data-categoria="geral">Geral</button>
+            <button data-categoria="banheiro">Banheiro</button>
+            <button data-categoria="lavanderia">Lavanderia</button>
+            <button data-categoria="pesada">Pesada</button>
+            <button data-categoria="auto">Auto</button>
         </aside>
-        <main class="produtos">
-            <div class="produto">
-                <img src="img/amaciante1.png" alt="Amaciante">
-                <p>Amaciante Comfort</p>
-                <p>R$00,00</p>
-            </div>
-            <div class="produto">
-                <img src="img/alcoolgel.png" alt="Alcool em gel">
-                <p>Alcool em Gel</p>
-                <p>R$00,00</p>
-            </div>
-            <div class="produto">
-                <img src="img/balde16l.png" alt="Balde 16 litros">
-                <p>Balde 16 litros</p>
-                <p>R$00,00</p>
-            </div>
-            <div class="produto">
-                <img src="img/cloro.png" alt="Cloro">
-                <p>Cloro líquido</p>
-                <p>R$00,00</p>
-            </div>
-            <div class="produto">
-                <img src="img/desinfetante.png" alt="Desinfetante">
-                <p>Desinfetante Lysoform</p>
-                <p>R$00,00</p>
-            </div>
-            <div class="produto">
-                <img src="img/panodechao.png" alt="Pano de chão">
-                <p>Pano de chão</p>
-                <p>R$00,00</p>
-            </div>
-            <div class="produto">
-                <img src="img/sabaoempo.png" alt="Sabao em Pó">
-                <p>Sabão em pó</p>
-                <p>R$00,00</p>
-            </div>
-            <div class="produto">
-                <img src="img/vassoura.png" alt="Vassoura">
-                <p>Vassoura</p>
-                <p>R$00,00</p>
-            </div>
-        </main>
+        
+    <main class="produtos">
+        <div class="produto lavanderia">
+            <img src="img/amaciante1.png" alt="Amaciante">
+            <p>Amaciante Comfort</p>
+            <p>R$00,00</p>
+        </div>
+        <div class="produto banheiro">
+            <img src="img/alcoolgel.png" alt="Alcool em gel">
+            <p>Álcool em Gel</p>
+            <p>R$00,00</p>
+        </div>
+        <div class="produto pesada">
+            <img src="img/balde16l.png" alt="Balde 16 litros">
+            <p>Balde 16 litros</p>
+            <p>R$00,00</p>
+        </div>
+        <div class="produto pesada">
+            <img src="img/cloro.png" alt="Cloro">
+            <p>Cloro líquido</p>
+            <p>R$00,00</p>
+        </div>
+        <div class="produto banheiro">
+            <img src="img/desinfetante.png" alt="Desinfetante">
+            <p>Desinfetante Lysoform</p>
+            <p>R$00,00</p>
+        </div>
+        <div class="produto lavanderia">
+            <img src="img/panodechao.png" alt="Pano de chão">
+            <p>Pano de chão</p>
+            <p>R$00,00</p>
+        </div>
+        <div class="produto lavanderia">
+            <img src="img/sabaoempo.png" alt="Sabão em Pó">
+            <p>Sabão em pó</p>
+            <p>R$00,00</p>
+        </div>
+        <div class="produto pesada">
+            <img src="img/vassoura.png" alt="Vassoura">
+            <p>Vassoura</p>
+            <p>R$00,00</p>
+        </div>
+    </main>
     </div>
 </body>
+<script src="js/scriptFiltro.js"></script>
 </html>

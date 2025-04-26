@@ -164,6 +164,33 @@ header {
     }
 }
 
+.card {
+    background-color: #eee;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.produto {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.produto.hidden {
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+
 /* RESPONSIVO */
 @media (max-width: 1024px) {
     .produtos {
