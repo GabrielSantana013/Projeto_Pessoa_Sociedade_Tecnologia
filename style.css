@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fa;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00aaff;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.menu-superior {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.menu-superior a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.menu-superior a:hover {
+    background-color: white;
+    color: #00aaff;
+}
+
+.menu-superior a.active {
+    border: 2px solid #00aaff;
+    background-color: white;
+    color: #00aaff;
+}
+
+
+.container {
+    display: flex;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.menu-lateral {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-lateral button {
+    padding: 10px;
+    background-color: #00aaff;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-lateral button:hover {
+    background-color: #0077aa;
+}
+
+.menu-lateral button.active {
+    background-color: black;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.produto {
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.produto img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.produto p {
+    margin: 5px 0;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.menu-lateral {
+    background-color: #f0f8ff; /* azul clarinho ou use #e0f7fa pra um tom mais suave */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 200px; /* ou ajuste conforme o layout */
+}
+
+/* Botões dentro da barra lateral */
+.menu-lateral button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #00aaff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-lateral button:hover {
+    background-color: #ffffff;
+    color: #00aaff;
+    border: 2px solid #00aaff;
+}
+
+.menu-lateral button.active {
+    background-color: white;
+    color: #00aaff;
+    border: 2px solid #00aaff;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .menu-lateral {
+        flex-direction: row;
+        overflow-x: auto;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .menu-lateral button {
+        flex-shrink: 0;
+    }
+}
+
+/* RESPONSIVO */
+@media (max-width: 1024px) {
+    .produtos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .menu-lateral button {
+        flex: 1;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-superior {
+        flex-direction: column;
+        align-items: center;
+    }
+}
