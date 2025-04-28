@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encomenda</title>
+    <link rel="stylesheet" href="css/encomenda.css">
+</head>
+<body>
+
+<header>Encomenda</header>
+
+<div class="main-content">
+
+    <div class="container-encomenda">
+        <div class="produto-encomenda">
+            <img id="imagemProduto" src="" alt="Produto">
+            <h2 id="nomeProduto">Nome do Produto</h2>
+            <p id="precoProduto">00,00</p>
+
+            <div class="formulario-encomenda">
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" value="1" min="1">
+                <button id="botaoPedido">Fazer Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-entrega">
+        <h3>Informações para entrega</h3>
+        <p>Rua Exemplo, 123</p>
+        <p>Cidade: Sua Cidade</p>
+        <p>CEP: 00000-000</p>
+    </div>
+
+</div>
+
+<script src="js/encomenda.js"></script>
+</body>
+</html>
