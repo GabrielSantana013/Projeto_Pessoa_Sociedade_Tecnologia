@@ -150,6 +150,27 @@ header {
     border: 2px solid #00aaff;
 }
 
+.rasgo-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  background: url('img/produtos-de-fundo.png') no-repeat center;
+  background-size: cover;
+  -webkit-mask-image: url('img/poca-mask.png');
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-image: url('img/poca-mask.png');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  pointer-events: none; /* para não bloquear clique nos elementos abaixo */
+  z-index: 0;
+}
+
+
 /* Responsivo */
 @media (max-width: 768px) {
     .menu-lateral {

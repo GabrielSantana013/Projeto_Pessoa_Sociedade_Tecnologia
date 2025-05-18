@@ -21,6 +21,68 @@ header {
     flex-wrap: wrap;
 }
 
+.info-contato {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.box {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 24px;
+    color: #30aee3;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    border: 2px solid #b288f2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 15px;
+    color: #000;
+}
+
+.botaoSocial {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.botaoSocial button {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botaoSocial button:hover {
+    background-color: #30aee3;
+    color: #fff;
+    border-color: #30aee3;
+}
+
+
 .logo img {
     height: 50px;
 }
