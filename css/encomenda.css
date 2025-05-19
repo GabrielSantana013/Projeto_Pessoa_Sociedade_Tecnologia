@@ -31,6 +31,34 @@ header {
     margin: 0 auto;
 }
 
+#formEntrega {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#formEntrega label {
+    font-weight: bold;
+    color: #333;
+}
+
+#formEntrega input[type="text"] {
+    padding: 10px;
+    border: 2px solid #00aaff;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+}
+
+#totalFinal {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0088cc;
+    display: inline-block;
+    margin-top: 10px;
+}
+
 .container-encomenda, .info-entrega {
     background-color: white;
     border-radius: 12px;
@@ -98,8 +126,6 @@ header {
     background-color: #0088cc;
 }
 
-
-/* Estilo da caixa de informações de entrega */
 .info-entrega h3 {
     color: #00aaff;
     margin-bottom: 15px;
@@ -110,7 +136,55 @@ header {
     font-size: 16px;
 }
 
-/* Responsivo */
+/* Estilos do cabeçalho - iguais ao da index.html */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00aaff;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.menu-superior {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.menu-superior a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.menu-superior a:hover {
+    background-color: white;
+    color: #00aaff;
+}
+
+.menu-superior a.active {
+    border: 2px solid #00aaff;
+    background-color: white;
+    color: #00aaff;
+}
+
+/* Responsividade para o menu superior */
+@media (max-width: 480px) {
+    .menu-superior {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
 @media (max-width: 768px) {
     .main-content {
         flex-direction: column;

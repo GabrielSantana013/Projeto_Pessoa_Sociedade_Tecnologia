@@ -29,7 +29,6 @@ produtos.forEach(produto => {
         const nome = produto.querySelector('p').innerText;
         const imagem = produto.querySelector('img').getAttribute('src');
         const preco = produto.querySelectorAll('p')[1].innerText;
-
         window.location.href = `encomenda.html?nome=${encodeURIComponent(nome)}&imagem=${encodeURIComponent(imagem)}&preco=${encodeURIComponent(preco)}`;
     });
 });
