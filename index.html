@@ -8,16 +8,29 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="img/logo.png" alt="Logo da Empresa">
+        <div class="header-left">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo da Empresa">
+            </div>
         </div>
-        <nav class="menu-superior">
-            <a href="index.html" class="active">Home</a>
-            <a href="empresa.html">Empresa</a>
-            <a href="contato.html">Contato</a>
-        </nav>
-        
+
+        <div class="header-center">
+            <form id="form-pesquisa" class="barra-pesquisa">
+                <input type="text" id="input-pesquisa" placeholder="Buscar produto...">
+                <span class="icone-lupa">🔍</span>
+            </form>
+            <a href="contato.html#como-comprar" class="como-comprar-link">Como comprar?</a>
+        </div>
+
+        <div class="header-right">
+            <nav class="menu-superior">
+                <a href="index.html" class="active">Home</a>
+                <a href="empresa.html">Empresa</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
     </header>
+
     <div class="container">
         <aside class="menu-lateral">
             <button class="active" data-categoria="geral">Geral</button>

@@ -170,21 +170,6 @@ header {
   z-index: 0;
 }
 
-
-/* Responsivo */
-@media (max-width: 768px) {
-    .menu-lateral {
-        flex-direction: row;
-        overflow-x: auto;
-        max-width: 100%;
-        padding: 10px;
-    }
-
-    .menu-lateral button {
-        flex-shrink: 0;
-    }
-}
-
 .card {
     background-color: #eee;
     padding: 15px;
@@ -210,7 +195,97 @@ header {
     overflow: hidden;
 }
 
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #00aaff;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
 
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 80px; /* AUMENTAR LOGO */
+    margin-left: 40px;
+}
+
+.barra-pesquisa input {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.barra-pesquisa input:focus {
+    outline: 2px solid white;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.menu-superior {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.header-left,
+.header-center,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-center {
+    flex: 1;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header-right {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.barra-pesquisa {
+    position: relative;
+    width: 250px;
+}
+
+.barra-pesquisa input {
+    width: 100%;
+    padding: 8px 35px 8px 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+.icone-lupa {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.como-comprar-link {
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.como-comprar-link:hover {
+    color: white;
+}
 
 /* RESPONSIVO */
 @media (max-width: 1024px) {
@@ -248,5 +323,19 @@ header {
     .menu-superior {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .menu-lateral {
+        flex-direction: row;
+        overflow-x: auto;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .menu-lateral button {
+        flex-shrink: 0;
     }
 }

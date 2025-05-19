@@ -23,6 +23,20 @@ botoesFiltro.forEach(botao => {
     });
 });
 
+document.getElementById("input-pesquisa").addEventListener("input", function () {
+    const termo = removerAcentos(this.value.toLowerCase());
+
+    document.querySelectorAll(".produto").forEach(produto => {
+        const nome = removerAcentos(produto.textContent.toLowerCase());
+        produto.classList.toggle("hidden", !nome.includes(termo));
+    });
+});
+
+function removerAcentos(texto) {
+    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+
 // Clique nos produtos
 produtos.forEach(produto => {
     produto.addEventListener('click', () => {

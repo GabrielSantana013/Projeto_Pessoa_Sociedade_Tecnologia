@@ -10,6 +10,55 @@ main {
     margin: 0 auto;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00aaff;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 80px; /* AUMENTAR LOGO */
+    margin-left: 40px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.menu-superior {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.header-left,
+.header-center,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-center {
+    flex: 1;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header-right {
+    flex: 1;
+    justify-content: flex-end;
+}
+
 .empresa-info {
     background-color: #f7f7f7;
     padding: 30px;

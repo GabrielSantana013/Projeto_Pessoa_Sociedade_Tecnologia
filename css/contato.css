@@ -11,14 +11,53 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-
 header {
-    background-color: #00aaff;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #00aaff;
     padding: 10px 20px;
     flex-wrap: wrap;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 80px; /* AUMENTAR LOGO */
+    margin-left: 40px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.menu-superior {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.header-left,
+.header-center,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-center {
+    flex: 1;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header-right {
+    flex: 1;
+    justify-content: flex-end;
 }
 
 .info-contato {
@@ -80,11 +119,6 @@ header {
     background-color: #30aee3;
     color: #fff;
     border-color: #30aee3;
-}
-
-
-.logo img {
-    height: 50px;
 }
 
 .menu-superior {
