@@ -209,3 +209,51 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .header-left,
+    .header-center,
+    .header-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .barra-pesquisa {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .menu-superior {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .como-comprar-link {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .barra-pesquisa input {
+        width: 100%;
+    }
+
+    .header-left img {
+        max-width: 100px;
+    }
+
+    .icone-lupa {
+        margin-left: -30px;
+    }
+}

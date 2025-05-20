@@ -116,26 +116,20 @@ header {
 
 
 .menu-lateral {
-    background-color: #f0f8ff; /* azul clarinho ou use #e0f7fa pra um tom mais suave */
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 170, 255, 0.15);
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 200px; /* ou ajuste conforme o layout */
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 200px;
 }
 
-/* Botões dentro da barra lateral */
+/* BOTÕES */
 .menu-lateral button {
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    background-color: #00aaff;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 20px;
+    flex: none;
 }
 
 .menu-lateral button:hover {
@@ -302,18 +296,88 @@ header {
     .menu-lateral {
         flex-direction: row;
         justify-content: center;
-        margin-bottom: 20px;
+        align-items: center;
+        flex-wrap: wrap;
         width: 100%;
+        padding: 10px;
+        border-radius: 0;
+        order: -1; /* sobe o aside para cima do main */
     }
 
     .menu-lateral button {
-        flex: 1;
+        flex: 1 1 auto;
+        min-width: 100px;
+        padding: 10px;
     }
 
     .produtos {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+@media (max-width: 768px) {
+    aside.menu-lateral {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 10px;
+        padding: 10px;
+        background: white;
+        border-radius: 10px;
+        margin-bottom: 10px;
+
+        width: 100%;              /* ocupa toda largura disponível */
+        justify-content: center;  /* centraliza os botões no eixo horizontal */
+        align-items: center;      /* alinha verticalmente no meio */
+        box-sizing: border-box;
+
+        margin-left: 0;           /* reseta margens laterais */
+        margin-right: 0;
+    }
+
+    aside.menu-lateral button {
+        flex: 0 0 auto;
+        min-width: 80px;          /* dá um tamanho mínimo para os botões */
+        text-align: center;
+    }
+
+  
+    aside.menu-lateral button {
+        flex: 1 0 auto;
+    }
+
+    aside.menu-lateral button {
+    flex: 1 1 0; /* permite que cada botão cresça igualmente */
+    min-width: 0;
+    }
+
+
+    aside.menu-lateral::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    aside.menu-lateral::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 10px;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .conteudo {
+        display: flex;
+        flex-direction: column; /* força aside e section um embaixo do outro */
+        justify-content: center;
+    }
+
+    .produtos {
+        width: 100%;
+    }
+}
+
 
 @media (max-width: 480px) {
     .produtos {
@@ -326,16 +390,87 @@ header {
     }
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
     .menu-lateral {
+        display: flex;
         flex-direction: row;
+        justify-content: center;
+        gap: 10px; /* espaçamento entre os botões */
+        width: 100%;
         overflow-x: auto;
-        max-width: 100%;
-        padding: 10px;
     }
 
     .menu-lateral button {
         flex-shrink: 0;
+        flex: 1;
+        min-width: 80px; /* ajustável */
     }
 }
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .header-left,
+    .header-center,
+    .header-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .barra-pesquisa {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .menu-superior {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .como-comprar-link {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .barra-pesquisa input {
+        width: 100%;
+    }
+
+    .header-left img {
+        max-width: 100px;
+    }
+
+    .icone-lupa {
+        margin-left: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-superior {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .menu-superior a {
+        flex-shrink: 0;
+        flex: 1;
+        min-width: 80px;
+        text-align: center;
+    }
+}
+
